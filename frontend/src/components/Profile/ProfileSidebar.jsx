@@ -1,19 +1,18 @@
+import axios from "axios";
 import React from "react";
 import { AiOutlineLogin, AiOutlineMessage } from "react-icons/ai";
-import { RiLockPasswordLine } from "react-icons/ri";
 import { HiOutlineReceiptRefund, HiOutlineShoppingBag } from "react-icons/hi";
-import { RxPerson } from "react-icons/rx";
-import { Link, useNavigate } from "react-router-dom";
 import {
   MdOutlineAdminPanelSettings,
-  MdOutlinePassword,
   MdOutlineTrackChanges,
 } from "react-icons/md";
+import { RiLockPasswordLine } from "react-icons/ri";
+import { RxPerson } from "react-icons/rx";
 import { TbAddressBook } from "react-icons/tb";
-import axios from "axios";
-import { server } from "../../server";
-import { toast } from "react-toastify";
 import { useSelector } from "react-redux";
+import { Link, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
+import { server } from "../../server";
 
 const ProfileSidebar = ({ active, setActive }) => {
   const navigate = useNavigate();

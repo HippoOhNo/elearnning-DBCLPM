@@ -13,10 +13,11 @@ import { CgProfile } from "react-icons/cg";
 import DropDown from "./DropDown";
 import Navbar from "./Navbar";
 import { useSelector } from "react-redux";
-import { backend_url } from "../../server";
+import { getImageUrl } from "../../server";
 import Cart from "../cart/Cart";
 import Wishlist from "../Wishlist/Wishlist";
 import { RxCross1 } from "react-icons/rx";
+import { backend_url } from "../../server";
 
 const Header = ({ activeHeading }) => {
   const { isSeller } = useSelector((state) => state.seller);
@@ -91,7 +92,7 @@ const Header = ({ activeHeading }) => {
                         <Link to={`/product/${i._id}`}>
                           <div className="w-full flex items-start-py-3">
                             <img
-                              src={`${backend_url}${i.images[0]}`}
+                              src={getImageUrl(i.images[0])}
                               alt="img"
                               className="w-[40px] h-[40px] mr-[10px]"
                             />
